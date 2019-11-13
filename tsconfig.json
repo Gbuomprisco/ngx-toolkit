@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "observed-property": [
+        "dist/observed-property"
+      ],
+      "observed-property/*": [
+        "dist/observed-property/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
