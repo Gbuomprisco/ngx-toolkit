@@ -22,8 +22,8 @@ export function observed() {
   ) {
     if (descriptor) {
       const original = descriptor.value;
-      descriptor.value = function() {
-        const result = original.call(this);
+      descriptor.value = function(...args: any[]) {
+        const result = original.apply(this, args);
         requestAnimationFrame(() => markDirty(this));
         return result;
       };
